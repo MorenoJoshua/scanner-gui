@@ -11,8 +11,10 @@ const defaultconfig = {
     rotation: { before: 100, after: 300 },
     shutter: { before: 100, after: 2000 }
   },
-  endpointURL: "http://localhost",
-  endpointPort: 3000
+  endpoint: {
+    url: "http://localhost",
+    port: 80
+  }
 };
 
 export { defaultconfig };

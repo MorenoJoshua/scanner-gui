@@ -1,5 +1,5 @@
 import React from "react";
-import {InputInterface} from '../interfaces';
+import { InputInterface } from "../interfaces";
 const required = { required: true };
 const asRequired = (formConfig: InputInterface[]) =>
   formConfig.reduce((acc, curr) => {

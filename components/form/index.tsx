@@ -18,20 +18,29 @@ take rotation pictures - before rotation loop, before rotation, after rotation, 
 incline forward for next rotation loop
 repeat until max degrees
 return to center
-
-
-initial wait
-Lag
-inclination before
-inclination after
-rotation before
-rotation after
-shutter before
-shutter after
 */
 
 const formConfig: InputInterface[] = [
   ...asRequired([
+    ...addSection("endpoint", [
+      {
+        name: "Endpoint",
+        type: "header"
+      },
+      {
+        name: "url",
+        label: "Scanner URL",
+        cols: s.l,
+        type: "url"
+      },
+      {
+        name: "port",
+        label: "Port",
+        cols: s.s,
+        type: "number",
+        ...numberPattern(1, 5)
+      }
+    ]),
     ...addSection("steps", [
       {
         name: "Steps Per Revolutions",
